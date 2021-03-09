@@ -923,7 +923,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 602766856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275504469}
+        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
+        m_MethodName: AddNumbers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &602766856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1352,6 +1364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff5bb39df520466fb8dee616064e8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ifA: {fileID: 295276943}
+  ifB: {fileID: 559040650}
+  Wert: 0
+  txt: {fileID: 1785979150}
 --- !u!1 &1348193300
 GameObject:
   m_ObjectHideFlags: 0
