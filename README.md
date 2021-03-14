@@ -2,29 +2,32 @@
 
 # README
 
-### Project description: 
+### Project description: Simple Revision Scene to practise CSharp (UI, Switching Scenes; Try/Catch)
 Projekt
 
 ### Development platform: 
-(OS, Unity Version, Visual Studio Version, used SDKs)
+MacOS Catalina 10.15.6, Unity 2020.1.5f1, Visual Studio 2019 8.3.11.1
+
 
 ### Target platform: 
-WebGL, Mobile, VR Device incl. reference resolution 
+WebGL (960x600)
 
 ### Visuals: 
-Screenshots (concept and experience), Video
+/
 
 ### Necessary setup/execution steps: 
-Installation process, e.g. step by step instructions that I can run the project after cloning it
+/
 
 ### Third party material: 
-(if used Fonts, Sounds, Music, Graphics, Materials, Code etc.)
+/
 
 ### Project state: 
-incl. progress in percent
+For Deadline 16.03.2021 100% finished
 
 ### Limitations: 
+Still shows sum of previous addition if a letter is used
 
 ### Lessons Learned: 
+Basic CSharp (Scene Switch, Try/Catch)
 
-Copyright by you :)
+Copyright by ElenaRosner
