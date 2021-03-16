@@ -59,36 +59,54 @@ public class Controller : MonoBehaviour
     public Color rot = Color.red;
     public Color weiss = Color.white;
 
-    public float ifAFloat;
-    public float ifBFloat;
+    private bool aFloat = true;
+    private bool bFloat = true;
+
+
 
     public void AddNumbers()
     {
+
+        float ifAFloat = 0;
+        float ifBFloat = 0;
+
         try
         {
             ifAFloat = float.Parse(ifA.text);
             ifA.image.color = weiss;
             message.text = "ADD NUMBERS";
+            aFloat = true;
         }
         catch (System.Exception)
         {
             message.text = "Geben Sie bitte eine gültige Zahl ein!";
             ifA.image.color = rot;
+            aFloat = false;
         }
 
         try
         {
             ifBFloat = float.Parse(ifB.text);
             ifB.image.color = weiss;
+            bFloat = true;
         }
         catch (System.Exception)
         {
             message.text = "Geben Sie bitte eine gültige Zahl ein!";
             ifB.image.color = rot;
+            bFloat = false;
         }
 
-        txt.text = (ifAFloat + ifBFloat).ToString();
-        Debug.Log("Die Addition ergibt: " + txt.text);
+
+        Debug.Log(aFloat + " " + bFloat);
+        Debug.Log(ifAFloat + " " + ifBFloat);
+
+        if (aFloat  && bFloat) // (aFloat == true && bFloat == true)->  == true kann man weglassen da es eh true ist | !aFloat -> wäre falsch
+        {
+            txt.text = (ifAFloat + ifBFloat).ToString();
+            Debug.Log("Die Addition ergibt: " + txt.text);
+        }
+       
     }
 
 
