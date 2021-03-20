@@ -3,7 +3,7 @@
 # README
 
 ### Project description: 
-Simple Revision Scene to practise CSharp (UI, Switching Scenes; Try/Catch)
+Simple Revision Scene to practise CSharp (UI, Switching Scenes; Try/Catch; Random Colorchanger)
 
 
 ### Development platform: 
@@ -23,12 +23,12 @@ WebGL (960x600)
 /
 
 ### Project state: 
-For Deadline 16.03.2021 - 100% finished
+For Deadline 23.03.2021 - 100% finished
 
 ### Limitations: 
 Still shows sum of previous addition if a letter is used
 
 ### Lessons Learned: 
-Basic CSharp (Scene Switch, Try/Catch)
+Basic CSharp (Scene Switch, Try/Catch, Random)
 
 Copyright by ElenaRosner

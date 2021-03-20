@@ -1,39 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
-   // public int ScenesToLoad;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    /*
-    public void ChangeScene()
-    {
-        SceneManager.LoadScene(ScenesToLoad);
-    }
-
-    public void LoadNextSceneAutomated()
-    {
-        SceneManager.LoadScene(SceneManager.GeActiveScene().buildIndex +1);
-
-    }
-    */
-
-    
+    //Change Scene (every scene)
     public void ChangeScene01()
     {
         SceneManager.LoadScene("01ColorScene");
@@ -44,70 +15,80 @@ public class Controller : MonoBehaviour
         SceneManager.LoadScene("02NumberScene");
     }
 
-
-   public void ChangeSzene00()
+    public void ChangeSzene00()
     {
         SceneManager.LoadScene("00WelcomeScene");
     }
 
+    //Random Color (01ColorScene)
+    public Image colorField;
+    public void RandomColor()
+    {
+        Color[] colors =
+        {
+            new Color32 (255, 205, 25, 100),
+            new Color32 (95, 34, 0, 100),
+            new Color32 (207, 63, 21, 100),
+            new Color32 (103, 47, 84, 100),
+        };
 
+        if (Input.GetKeyDown("space"))
+        {
+            colorField.color = colors[Random.Range(0, colors.Length)];
+        }
+    }
+
+    void Update()
+    {
+        RandomColor();
+    }
+
+    //Number Addition (02NumberScene)
     public InputField ifA;
     public InputField ifB;
+
     public Text txt;
     public Text message;
-
-    public Color rot = Color.red;
-    public Color weiss = Color.white;
 
     private bool aFloat = true;
     private bool bFloat = true;
 
-
-
     public void AddNumbers()
     {
-
         float ifAFloat = 0;
         float ifBFloat = 0;
+        string errorMsg = "Geben Sie bitte eine gültige Zahl ein!";
 
         try
         {
             ifAFloat = float.Parse(ifA.text);
-            ifA.image.color = weiss;
+            ifA.image.color = Color.white;
             message.text = "ADD NUMBERS";
             aFloat = true;
         }
         catch (System.Exception)
         {
-            message.text = "Geben Sie bitte eine gültige Zahl ein!";
-            ifA.image.color = rot;
+            message.text = errorMsg;
+            ifA.image.color = Color.red;
             aFloat = false;
         }
 
         try
         {
             ifBFloat = float.Parse(ifB.text);
-            ifB.image.color = weiss;
+            ifB.image.color = Color.white;
             bFloat = true;
         }
         catch (System.Exception)
         {
-            message.text = "Geben Sie bitte eine gültige Zahl ein!";
-            ifB.image.color = rot;
+            message.text = errorMsg;
+            ifB.image.color = Color.red;
             bFloat = false;
         }
 
-
-        Debug.Log(aFloat + " " + bFloat);
-        Debug.Log(ifAFloat + " " + ifBFloat);
-
-        if (aFloat  && bFloat) // (aFloat == true && bFloat == true)->  == true kann man weglassen da es eh true ist | !aFloat -> wäre falsch
+        if (aFloat  && bFloat)
         {
             txt.text = (ifAFloat + ifBFloat).ToString();
-            Debug.Log("Die Addition ergibt: " + txt.text);
-        }
-       
+        }    
     }
-
-
 }
