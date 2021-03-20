@@ -29,6 +29,6 @@ For Deadline 23.03.2021 - 100% finished
 Still shows sum of previous addition if a letter is used
 
 ### Lessons Learned: 
-Basic CSharp (Scene Switch, Try/Catch, Random)
+Basic CSharp (Scene Switch, Try/Catch, Random Color Change)
 
 Copyright by ElenaRosner
